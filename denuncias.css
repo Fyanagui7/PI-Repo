@@ -100,9 +100,9 @@
     color: #ccc;
   }
   .container {
-    margin: 0 auto;
-    width: 80%;
-    max-width: 60%;
+    margin: 200px auto;
+    width: 85%;
+    max-width: 1000px;
     background-color: #ddd;
     border-radius: 20px;
     padding: 40px;
@@ -131,25 +131,22 @@
   
   .post-content {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    flex-wrap: nowrap; /* garante que fiquem lado a lado */
+    justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 20px;
-    height: auto; /* remova height fixa se necessário */
+    height: 20rem;
+    
   }
   
   .post-image {
-    width: 300px;
-    height: 300px;
+    width: 470px;
+    height: 350px;
     border: 2px solid black;
-    flex-shrink: 0;
   }
   
-  
   .comment-box {
-    width: 450px;
-    height: 300px;
+    width: 400px;
+    height: 350px;
     background-color: white;
     border-radius: 20px;
     padding: 15px;
@@ -188,13 +185,14 @@
     text-align: center;
   }
 
-  #cadastro{
-    margin-top: 14rem;
+  #denuncias{
+    margin-top: 10rem;
     width: 70%;
     padding: 70px;
-    background-color: rgb(175, 175, 175);
-    margin-left: 18rem;
+    background-color:  rgb(237, 237, 237);
+    margin-left: 12rem;
     border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
   }
   .page {
     display: flex;
@@ -202,8 +200,9 @@
     align-items: center;
     align-content: center;
     justify-content: center;
-    width: 100%;
-    height: 100vh;
+    width: 95%;
+    height: 40%;
+    margin-top: 8rem;
 
 }
 
@@ -212,10 +211,9 @@
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     border-radius: 7px;
-    padding: 70px;
+    padding: 50px;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-    gap: 5px;
-    margin-top: 10rem;
+    gap: 5px
 }
 
 .areaLogin img {
@@ -261,7 +259,7 @@
     display: inline-block;
     margin-bottom: 20px;
     font-size: 13px;
-    color: #555;
+    color: #9b9b9b;
     transition: all linear 160ms;
 }
 
@@ -286,32 +284,24 @@
     background-color: #0ee3ff;
 
 }
-#sobre{
-  margin-top: 10rem;
-  padding: 10px;
-  margin-left: 10rem;
-  margin-right: 10rem;
+#checkbox{
+    justify-content: left;
+    align-items: left;
+    align-content: left;
 }
-#texto{
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 22px;
-  text-align: justify;
+select{
+    border-style: groove;
+    padding: 7px;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    border-color: rgb(191, 191, 191);
 }
-#titulo{
-  text-decoration: underline;
-  text-align: center;
+#descricao{
+    height: 43px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1rem;
+    border-style: groove;
+    border-color: rgb(156, 156, 156);
+    
 }
-#Text{
-  width: 60%;
-  border-radius: 5px;
-  border-style: groove;
-  margin-right: 3rem;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding-top: 100px; /* espaço para a navbar fixa */
-  background-color: #f0f0f0; /* opcional para contraste */
-}
+
