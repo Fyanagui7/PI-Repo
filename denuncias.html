@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="denuncias.css">
 </head>
 <body>
+  <div class="image-container">
+  </div>
     <nav class="topo">
         <div class="navbar-container">
           
@@ -15,7 +17,7 @@
           
           <ul class="menu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="denuncias.html">Denúncias</a></li>
+            <li><a href="denuncias.html">Formulários</a></li>
     
             <!-- LOGO no meio -->
             <li class="logo-item">
@@ -35,19 +37,26 @@
       </nav>
       <div class="page" id="denuncias">
         <form method="POST" class="formLogin">
-            <h1>Faça sua Denúncia</h1>
-            <p>Digite os dados requeridos para a Denúncia.</p>
-            <label for="list">Categoria da Denúncia</label>
+            <h1>Faça seu formulário</h1>
+            <p>Digite os dados requeridos para o formulário.</p>
+            <label for="list">Qual o motivo do formulário?</label>
+            <select id="selecao" required>
+              <option value="op1">Elogio</option>
+              <option value="op2">Reclamação</option>
+              <option value="op3">Sugestão</option>
+            </select>
+            <label for="list">Em qual situação se encaixa?</label>
             <select id="selecao" required>
               <option value="op1">Segurança</option>
               <option value="op2">Trânsito</option>
               <option value="op3">Ambiental</option>
               <option value="op4">Elétrica</option>
               <option value="op5">Patrimônio</option>
+              <option value="op5">Outro</option>
             </select>
-            <label for="text">Descrição da Denúncia</label>
-            <textarea name="Descrição" id="descricao" cols="30" rows="10" placeholder="Escreva o motivo da Denúncia"></textarea>
-            <label for="text">Endereço da Denúncia</label>
+            <label for="text">Descrição do formulário</label>
+            <textarea name="Descrição" id="descricao" cols="30" rows="10" placeholder="Escreva um texto sobre o Ocorrido"></textarea>
+            <label for="text">Endereço do Ocorrido</label>
             <input type="text" placeholder="(Rua e Bairro)" required/>
             <label for="Number">Celular</label>
             <input type="text" placeholder="Numero Celular" maxlength="11" required>
