@@ -234,7 +234,7 @@ nav.topo {
     margin-bottom: 25px;
 }
 
-.formLogin input {
+.formLogin .txt {
     padding: 15px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -243,6 +243,11 @@ nav.topo {
     border-radius: 4px;
     transition: all linear 160ms;
     outline: none;
+}
+.formLogin .checkbox {
+  margin: 0;
+  width: 2rem;
+  display: inline-block;
 }
 
 
@@ -258,13 +263,13 @@ nav.topo {
 .formLogin a {
     display: inline-block;
     margin-bottom: 20px;
-    font-size: 13px;
-    color: #555;
+    font-size: 16px;
+    color: blue;
     transition: all linear 160ms;
 }
 
 .formLogin a:hover {
-    color: grey
+    color: blue
 }
 
 .btn {
