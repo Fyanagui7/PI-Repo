@@ -1,65 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Navbar com SOSI</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 </head>
 <body>
-
-  <nav class="topo">
-    <div class="navbar-container">
-      
-      <!-- Botão SOSI na esquerda -->
-      <a href="#" class="sosi-btn"><span class="sos">SOS</span><span class="i">I</span></a>
-      
-      <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="denuncias.html">Denúncias</a></li>
-
-        <!-- LOGO no meio -->
-        <li class="logo-item">
-          <img src="https://preview.redd.it/3qe3e6awkjb01.png?auto=webp&s=df0ee4e3c331db741a6b3a80eff9fdc0bc638244" alt="Logo" class="logo">
-        </li>
-
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-
-      <div class="auth-links">
-        <a href="cadastro.html">Cadastro</a>
-        <a href="entrar.html">Entrar</a>
-      </div>
-
-    </div>
-  </nav>
-  <main class="container">
-    <div class="top-bar">
-      <div class="left">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Indaiatuba_brasao.gif" alt="Brasão" width="30">
-        <span>Prefeitura de Indaiatuba</span>
-      </div>
-      <div class="center">
-        <span>Pedras fundamentais</span>
-      </div>
-      <div class="right">
-        <span>17/04/2025<br>10:00</span>
-      </div>
-    </div>
-
-    <div class="post-content">
-      <img class="post-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxifN76Lz2jhaK5VFFLcPe2Ah_n1P5qEfMHg&s" alt="Postagem">
-      
-      <div class="comment-box">
-        <textarea class="comment-text" placeholder="Lançamento das pedras fundamentais parque dos rosários e Novo hospital municipal"></textarea>
-        <div class="comment-footer">
-          <label for="Text">Deixe seu comentário:</label>
-          <input type="text" name="Comentário" id="Text">
-          <button title="Enviar comentário">💬</button>
+    <nav class="topo">
+        <div class="navbar-container">
+          
+          <!-- Botão SOSI na esquerda -->
+          <a href="#" class="sosi-btn"><span class="sos">SOS</span><span class="i">I</span></a>
+          
+          <ul class="menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="denuncias.html">Denúncias</a></li>
+    
+            <!-- LOGO no meio -->
+            <li class="logo-item">
+              <img src="https://preview.redd.it/3qe3e6awkjb01.png?auto=webp&s=df0ee4e3c331db741a6b3a80eff9fdc0bc638244" alt="Logo" class="logo">
+            </li>
+    
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+    
+          <div class="auth-links">
+            <a href="cadastro.html">Cadastro</a>
+            <a href="index.html">Entrar</a>
+          </div>
+    
         </div>
-      </div>
+      </nav>
+
+
+
+      <div class="page" id="entrar">
+        <form method="POST" class="formLogin">
+            <h1>Login</h1>
+            <p>Digite os seus dados de acesso no campo abaixo.</p>
+            <label for="email">E-mail</label>
+            <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+            <label for="password">Senha</label>
+            <input type="password" placeholder="Digite sua senha" />
+            <br>
+            Não possui uma conta?  <a href="cadastro.html">Criar uma conta</a>
+            <a href="/">Esqueci minha senha</a>
+            <input type="submit" value="Entrar" class="btn" />
+        </form>
     </div>
-  </main>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 </body>
 </html>

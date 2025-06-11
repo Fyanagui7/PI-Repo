@@ -17,7 +17,7 @@
           <a href="#" class="sosi-btn"><span class="sos">SOS</span><span class="i">I</span></a>
           
           <ul class="menu">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="home.html">Home</a></li>
             <li><a href="denuncias.html">Denúncias</a></li>
     
             <!-- LOGO no meio -->
@@ -31,7 +31,7 @@
     
           <div class="auth-links">
             <a href="cadastro.html">Cadastro</a>
-            <a href="entrar.html">Entrar</a>
+            <a href="index.html">Entrar</a>
           </div>
     
         </div>
@@ -44,17 +44,19 @@
             <h1>Cadastro</h1>
             <p>Digite os seus dados de acesso no campo abaixo.</p>
             <label for="email">E-mail</label>
-            <input id="email" type="email" placeholder="Digite seu e-mail" autofocus="true" />
+            <input class="txt" id="email" type="email" placeholder="Digite seu e-mail" autofocus="true" />
             <label for="password">Senha</label>
-            <input type="password" placeholder="Digite sua senha" minlength="8" />
+            <input class="txt" type="password" placeholder="Digite sua senha" minlength="8" />
             <label for="password">Confirme sua senha</label>
-            <input type="password" placeholder="Confirmar senha" minlength="8" />
+            <input class="txt" type="password" placeholder="Confirmar senha" minlength="8" />
             <label for="Number">Celular</label>
-            <input type="text" placeholder="Numero Celular" maxlength="11">
+            <input class="txt" type="text" placeholder="Numero Celular" maxlength="11">
             <label for="CPF">Informe o CPF</label>
-            <input type="text" placeholder="Digite o CPF" maxlength="11">
-            <label for="checkbox">Termos de uso:</label>
-            <input id="checkbox" type="checkbox">Você aceita os termos de uso do usuário  
+            <input class="txt" type="text" placeholder="Digite o CPF" maxlength="11">
+            <br>
+            Já possui uma conta?<a href="index.html">Fazer Login</a>
+            <label id="lblcheckbox" for="checkbox">Termos de uso:</label>
+            <input class="checkbox" id="checkbox" type="checkbox">  
             <input type="submit" value="Cadastrar" class="btn" />
             
         </form>
