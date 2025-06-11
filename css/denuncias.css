@@ -8,7 +8,7 @@
     font-family: Arial, sans-serif;
   }
  .image-container{
-    background-image: url('./images/background_denuncias.jpg');
+    background-image: url('/images/background_denuncias.jpg');
     position: fixed;
     top: 0;
     left: 0;
