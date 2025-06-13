@@ -7,6 +7,7 @@
   body {
     font-family: Arial, sans-serif;
     height: 100%;
+    background-image: url('/images/background\ sobre..jpg');
   }
   
   nav.topo {
@@ -106,9 +107,11 @@
   .titulo{
     margin-top: 12rem;
   }
-  .texto{
-    margin-top: 20rem;
+  #texto{
+    margin-left: 1rem;
+    margin-right: 1rem;
     text-align: justify;
-    float: left;
+    
+    color: white;
   }
    
