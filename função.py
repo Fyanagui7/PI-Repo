@@ -1,12 +1,3 @@
-import re
-
-def postagem():
-
-        titulo = str(input("Digite o Título da Postagem"))
-        imagem = str(input("Inserir Imagem da Postagem"))
-        descricao = str(input("digite a descrição da postagem"))
-
-
 
 def validar_cpf(cpf: str) -> bool:
     # Remove caracteres não numéricos

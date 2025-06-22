@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/denuncias.css">
+    <link rel="stylesheet" href="/static/css/denuncias.css">
 </head>
 <body>
   <div class="image-container">
@@ -12,14 +12,14 @@
     <nav class="topo">
         <div class="navbar-container">
           
-          <!-- Botão SOSI na esquerda -->
+          
           <a href="#" class="sosi-btn"><span class="sos">SOS</span><span class="i">I</span></a>
           
           <ul class="menu">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="home.html">Home</a></li>
             <li><a href="denuncias.html">Formulários</a></li>
     
-            <!-- LOGO no meio -->
+            
             <li class="logo-item">
               <img src="https://preview.redd.it/3qe3e6awkjb01.png?auto=webp&s=df0ee4e3c331db741a6b3a80eff9fdc0bc638244" alt="Logo" class="logo">
             </li>
@@ -36,37 +36,48 @@
         </div>
       </nav>
       <div class="page" id="denuncias">
-        <form method="POST" class="formLogin">
-            <h1>Faça seu formulário</h1>
-            <p>Digite os dados requeridos para o formulário.</p>
-            <label for="list">Qual o motivo do formulário?</label>
-            <select id="selecao" required>
-              <option value="op1">Elogio</option>
-              <option value="op2">Reclamação</option>
-              <option value="op3">Sugestão</option>
-            </select>
-            <label for="list">Em qual situação se encaixa?</label>
-            <select id="selecao" required>
-              <option value="op1">Segurança</option>
-              <option value="op2">Trânsito</option>
-              <option value="op3">Ambiental</option>
-              <option value="op4">Elétrica</option>
-              <option value="op5">Patrimônio</option>
-              <option value="op5">Outro</option>
-            </select>
-            <label for="text">Descrição do formulário</label>
-            <textarea name="Descrição" id="descricao" cols="30" rows="10" placeholder="Escreva um texto sobre o Ocorrido"></textarea>
-            <label for="text">Endereço do Ocorrido</label>
-            <input type="text" placeholder="(Rua e Bairro)" required/>
-            <label for="Number">Celular</label>
-            <input type="text" placeholder="Numero Celular" maxlength="11" required>
-            <label for="CPF">Data do Ocorrido</label>
-            <input type="date" placeholder="dd/mm/aaaa" maxlength="11">
-            <label for="anexo">Anexo (Opcional) </label>
-            <input type="file" placeholder="Video / Imagem">
-            <input type="submit" value="Enviar" class="btn" />
-            
-        </form>
+        <form method="POST" action="/enviar" class="formLogin">
+    <h1>Faça seu formulário</h1>
+    <p>Digite os dados requeridos para o formulário.</p>
+
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+    <label for="motivo">Qual o motivo do formulário?</label>
+    <select id="motivo" name="motivo" required>
+        <option value="Elogio">Elogio</option>
+        <option value="Reclamação">Reclamação</option>
+        <option value="Sugestão">Sugestão</option>
+    </select>
+
+    <label for="categoria">Em qual situação se encaixa?</label>
+    <select id="categoria" name="categoria" required>
+        <option value="Segurança">Segurança</option>
+        <option value="Trânsito">Trânsito</option>
+        <option value="Ambiental">Ambiental</option>
+        <option value="Elétrica">Elétrica</option>
+        <option value="Patrimônio">Patrimônio</option>
+        <option value="Outro">Outro</option>
+    </select>
+
+    <label for="descricao">Descrição do formulário</label>
+    <textarea id="descricao" name="descricao" cols="30" rows="10" placeholder="Escreva um texto sobre o ocorrido" required></textarea>
+
+    <label for="endereco">Endereço do Ocorrido</label>
+    <input type="text" id="endereco" name="endereco" placeholder="Rua e Bairro" required />
+
+    <label for="telefone">Celular</label>
+    <input type="text" id="telefone" name="telefone" placeholder="Número de Celular" maxlength="11" required>
+
+    <label for="data">Data do Ocorrido</label>
+    <input type="date" id="data" name="data" required>
+
+    <label for="anexo">Anexo (Opcional)</label>
+    <input type="file" id="anexo" name="anexo">
+
+    <input type="submit" value="Enviar" class="btn" />
+</form>
+
     </div>
     
 </body>
