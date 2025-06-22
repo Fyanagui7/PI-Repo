@@ -1,3 +1,5 @@
+import re
+
 
 def validar_cpf(cpf: str) -> bool:
     # Remove caracteres não numéricos
