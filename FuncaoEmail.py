@@ -22,7 +22,7 @@ def enviar():
     remetente = 'tbraunfelipe@gmail.com'
 # https://myaccount.google.com/apppasswords <--- Link para remover ou adicionar a senha
     senha = 'amuk jcab vfop qctq'
-    destinatario = 'edudigital09@fiec.com.br'
+    destinatario = 'contadepc321@gmail.com'
 
     msg = MIMEMultipart()
     msg['From'] = remetente
