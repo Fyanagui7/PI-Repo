@@ -1,7 +1,7 @@
 import re
 
 
-def validar_cpf(cpf: str) -> bool:
+def validar_cpf(cpf: str):
     
     cpf = str(input("Digite seu CPF"))
     cpf = re.sub(r'\D', '', cpf)
@@ -20,7 +20,6 @@ def validar_cpf(cpf: str) -> bool:
 
     return cpf[-2:] == f"{digito1}{digito2}"
 
-# Exemplo de uso
 cpf_teste = "123.456.789-09"
 if validar_cpf(cpf_teste):
     print("CPF válido.")

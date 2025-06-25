@@ -30,7 +30,6 @@ def gerenciar_usuarios():
         else:
             print("Opção inválida. Tente novamente.")
 
-    # Ao final, mostra a string com todos os usuários
     usuarios_str = ", ".join(usuarios)
     print("\nUsuários finais armazenados na string:")
     print(usuarios_str)
