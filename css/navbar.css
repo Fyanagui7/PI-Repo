@@ -1,0 +1,105 @@
+/* navbar.css - unificado para todas as páginas */
+* { box-sizing: border-box; }
+
+/* força scrollbar vertical sempre — evita deslocamento quando uma página tem conteúdo maior */
+html { overflow-y: scroll; }
+
+/* Base navbar */
+nav.topo {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0; /* padding consistente */
+  z-index: 1000;
+  transition: all 0.25s ease;
+}
+
+/* Centraliza o conteúdo da navbar e garante consistência */
+.navbar-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;        /* IMPORTANT: igual em todas as páginas */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* SOSI button (esquerda) */
+.sosi-btn {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 0; /* agora controlado pelo padding do container */
+  transition: transform 0.2s;
+}
+
+/* Menu central */
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: none;               /* IMPORTANT: evita esticar diferentemente */
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* Links do menu */
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(255,255,255,0.08);
+  padding: 8px 15px;
+  font-size: 18px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: all 0.18s;
+}
+
+/* Logo central (mantido como item do menu) */
+.logo-item {
+  display: flex;
+  align-items: center;
+}
+.logo-item .logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Links de autenticação (direita) */
+.auth-links {
+  display: flex;
+  gap: 1.2rem;
+  margin-right: 0; /* já pelo padding do container */
+}
+.auth-links a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Ajustes de acessibilidade e foco */
+.menu li a:focus,
+.auth-links a:focus,
+.sosi-btn:focus {
+  outline: 2px solid rgba(255,255,255,0.2);
+  outline-offset: 2px;
+}
+
+/* Responsividade mínima */
+@media (max-width: 900px) {
+  .navbar-container { padding: 0 12px; }
+  .menu { gap: 1rem; }
+  .sosi-btn { font-size: 24px; }
+  .logo-item .logo { width: 40px; height: 40px; }
+}
