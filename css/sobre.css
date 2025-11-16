@@ -37,11 +37,16 @@ body {
 
 /* Texto com margem lateral e justificado */
 #texto {
+    margin-top: 5rem;
     margin-left: 1rem;
-    margin-right: 1rem;
+    margin-right: 50rem;
     text-align: justify;
     color: white;
     line-height: 1.5;
+    border: 1px;
+    border-style: solid;
+    border-color: white;
+    padding: 2rem;
 }
 
 /* Estilo uniforme para botões */
@@ -67,4 +72,13 @@ button:hover, input[type="submit"]:hover {
 /* Espaçamento do deck de cards se usar */
 .card-deck {
     margin-top: 10rem;
+    
+}
+.card img{
+     width: 150px;
+    height: 150px;
+    object-fit: cover;   /* mantém o corte redondo mesmo se a foto for retangular */
+    border-radius: 50%;  /* deixa redondo */
+    display: block;
+    margin: 0 auto 15px auto;  /* centraliza no card */
 }
