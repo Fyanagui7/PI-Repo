@@ -7,10 +7,8 @@
 
 body {
 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #f0f0f0;
-  margin: 0;
-  padding-top: 120px;
   background-image: url('/images/backgroundSobre..jpg');
 }
 
@@ -49,27 +47,6 @@ body {
     padding: 2rem;
 }
 
-/* Estilo uniforme para botões */
-button, input[type="submit"] {
-    width: 100%;
-    max-width: 250px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    background-color: #4a90e2;
-    color: white;
-    transition: background-color 0.3s ease;
-    margin: 2rem auto 0 auto;
-    display: block;
-}
-
-button:hover, input[type="submit"]:hover {
-    background-color: #357ABD;
-}
-
-/* Espaçamento do deck de cards se usar */
 .card-deck {
     margin-top: 10rem;
     
