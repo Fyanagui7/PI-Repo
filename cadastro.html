@@ -32,21 +32,21 @@
 
 
       <div class="page" id="cadastro">
-        <form method="POST" class="formLogin">
+        <form method="POST" class="formLogin" action="cria_cadastro.php">
             <h1>Cadastro</h1>
             <p>Digite os seus dados de acesso no campo abaixo.</p>
             <label for="email">E-mail</label>
-            <input class="txt" id="email" type="email" placeholder="Digite seu e-mail" autofocus="true" />
+            <input class="txt" id="email" type="email" name="email" placeholder="Digite seu e-mail" autofocus="true" />
              <label for="nome">Nome</label>
-            <input class="txt" id="nome" type="text" placeholder="Digite sua senha" minlength="8" />
+            <input class="txt" id="nome" type="text" name="nome" placeholder="Digite sua senha" minlength="8" />
             <label for="password">Senha</label>
-            <input class="txt" id="password" type="password" placeholder="Digite sua senha" minlength="8" />
+            <input class="txt" id="password" type="password" name="senha" placeholder="Digite sua senha" minlength="8" />
             <label for="RPassword">Confirme sua senha</label>
             <input class="txt" id="RPassword" type="password" placeholder="Confirmar senha" minlength="8" />
             <label for="telefone">Celular</label>
-            <input class="txt" id="telefone" type="tel" placeholder="Numero Celular" maxlength="11">
+            <input class="txt" id="telefone" type="tel" name="tel" placeholder="Numero Celular" maxlength="11">
             <label for="CPF">Informe o CPF</label>
-            <input class="txt" type="text" placeholder="Digite o CPF" maxlength="11">
+            <input class="txt" type="text" name="cpf" placeholder="Digite o CPF" maxlength="11">
             <br>
             Já possui uma conta?<a href="index.html">Fazer Login</a>
             <label id="lblcheckbox" for="checkbox">Termos de uso:</label>
