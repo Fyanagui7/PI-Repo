@@ -12,8 +12,8 @@ $celular = $_POST['tel'];
 $cpf = $_POST['cpf'];
 
 
-$query = "INSERT INTO pi (email, nome, senha, celular, cpf ) 
-VALUES ($email, $name, $senha, $celular, $cpf);"
+$query = "INSERT INTO cadastro (email, nome, senha, celular, cpf ) 
+VALUES ('$email', '$name', '$senha', '$celular', '$cpf');";
 
 if(mysqli_query($conexao, $query)){
     echo "<h1>Pessoa cadastrada com sucesso!</h1>";
