@@ -58,4 +58,5 @@ body {
     border-radius: 50%;  /* deixa redondo */
     display: block;
     margin: 0 auto 15px auto;  /* centraliza no card */
+    margin-top: 10px;
 }
