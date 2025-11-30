@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="./css/navbar.css">
 </head>
 <body>
     <nav class="topo">
@@ -32,13 +32,13 @@
 
 
       <div class="page" id="entrar">
-        <form method="POST" class="formLogin">
+        <form method="POST" class="formLogin" action="login.php">
             <h1>Login</h1>
             <p>Digite os seus dados de acesso no campo abaixo.</p>
             <label for="email">E-mail</label>
-            <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+            <input type="email" placeholder="Digite seu e-mail" name="email" autofocus="true" />
             <label for="password">Senha</label>
-            <input type="password" placeholder="Digite sua senha" />
+            <input type="password" name="senha" placeholder="Digite sua senha" />
             <br>
             Não possui uma conta?  <a href="cadastro.html">Criar uma conta</a>
             <a href="/">Esqueci minha senha</a>
