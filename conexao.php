@@ -8,9 +8,9 @@
     $conexao = new mysqli($db_server, $user, $password, $db_name);
 
     if($conexao->connect_error){
-        echo "falha na conexao";
+        echo "<h1>falha na conexao</h1>";
     }
-        echo "conectado com sucesso";
+        echo "<h1>Conectado no banco com sucesso</h1>";
     
 
 
