@@ -30,6 +30,9 @@ body {
     animation: contatoFadeIn 0.6s ease;
     text-align: center;
     margin-top: 2rem; /* garante espaço extra do topo */
+    border: 1px;
+    border-color: black;
+    border-style: solid;
 }
 .contato-container > * {
     margin-top: 1rem;
@@ -46,6 +49,7 @@ body {
     font-size: 16px;
     color: #666;
     margin-bottom: 30px;
+    text-decoration: underline;
 }
 
 .contato-info {

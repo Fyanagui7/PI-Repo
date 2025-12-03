@@ -1,54 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Escolher Login</title>
+  <link rel="stylesheet" href="./css/login.css" />
   <link rel="stylesheet" href="./css/navbar.css">
 </head>
 <body>
-    <nav class="topo">
+
+  <!-- Navbar reutilizável -->
+  <nav class="topo">
     <div class="navbar-container">
       <a href="#" class="sosi-btn"><span class="sos">SOS</span><span class="i">I</span></a>
       <ul class="menu">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="denuncias.html">Formulários</a></li>
-        <li class="logo-item">
+       
+      
+        <li><a href="sobre.html">Sobre</a></li>
+
+         <li class="logo-item">
           <img src="https://preview.redd.it/3qe3e6awkjb01.png?auto=webp&s=df0ee4e3c331db741a6b3a80eff9fdc0bc638244" alt="Logo" class="logo">
         </li>
-        <li><a href="sobre.html">Sobre</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
       <div class="auth-links">
         <a href="cadastro.html">Cadastro</a>
-        <a href="login.html">Entrar</a>
+        <a href="index.html">Entrar</a>
       </div>
     </div>
   </nav>
 
-
-
-      <div class="page" id="entrar">
-        <form method="POST" class="formLogin" action="login.php">
-            <h1>Login</h1>
-            <p>Digite os seus dados de acesso no campo abaixo.</p>
-            <label for="email">E-mail</label>
-            <input type="email" placeholder="Digite seu e-mail" name="email" autofocus="true" />
-            <label for="password">Senha</label>
-            <input type="password" name="senha" placeholder="Digite sua senha" />
-            <br>
-            Não possui uma conta?  <a href="cadastro.html">Criar uma conta</a>
-            <a href="/">Esqueci minha senha</a>
-            <input type="submit" value="Entrar" class="btn" />
-        </form>
+  <!-- Tela de escolha -->
+  <div class="login-choice-container">
+    <h1>Como deseja fazer login?</h1>
+    <div class="login-options">
+      <a href="login.html" class="login-option user">Login como Usuário</a>
+      <a href="loginPref.html" class="login-option prefeitura">Login como Prefeitura</a>
     </div>
-
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </div>
 
 </body>
 </html>
