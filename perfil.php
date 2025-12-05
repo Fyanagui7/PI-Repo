@@ -21,19 +21,23 @@ $usuario = $_SESSION['usuario'];
 <body>
     <div class="image-container"></div>
 
-<nav class="topo">
+ <nav class="topo">
     <div class="navbar-container">
       <a href="#" class="sosi-btn"><span class="sos">SOS</span><span class="i">I</span></a>
       <ul class="menu">
-        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="./pagina_log/home.html">Home</a></li>
+        <li><a href="./pagina_log/denuncias.html">Formulários</a></li>
         <li class="logo-item">
           <img src="https://preview.redd.it/3qe3e6awkjb01.png?auto=webp&s=df0ee4e3c331db741a6b3a80eff9fdc0bc638244" alt="Logo" class="logo">
         </li>
-        <li><a href="contato.html">Contato</a></li>
+        <li><a href="./pagina_log/log_sobre.html">Sobre</a></li>
+        <li><a href="./pagina_log/log_contato.html">Contato</a></li>
       </ul>
-      <div class="auth-links"></div>
+      <div class="auth-links">
+            <li style="list-style: none;"><a href="perfil.php">Perfil</a></li>
+      </div>
     </div>
-</nav>
+  </nav>
 
 <section class="contato-wrapper">
     <div class="contato-container">
