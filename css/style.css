@@ -133,3 +133,18 @@ body {
     width: 90%;
   }
 }
+
+.postagem{
+color: white;
+margin-left: 80%;
+padding: 12px 15px;
+background-color: #4a90e2;
+border-radius: 10px;
+border: 0px;
+position: absolute;
+}
+
+.postagem:hover{
+padding:17px;
+text-decoration: underline;
+}

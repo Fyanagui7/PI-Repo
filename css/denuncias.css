@@ -16,7 +16,6 @@ body {
 
 /* Background */
 .image-container {
-    background-image: url('/images/background_denuncias.jpg');
     position: fixed;
     top: 0;
     left: 0;
