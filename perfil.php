@@ -25,7 +25,7 @@ $usuario = $_SESSION['usuario'];
     <div class="navbar-container">
       <a href="#" class="sosi-btn"><span class="sos">SOS</span><span class="i">I</span></a>
       <ul class="menu">
-        <li><a href="./pagina_log/home.html">Home</a></li>
+        <li><a href="./pagina_log/home.php">Home</a></li>
         <li><a href="./pagina_log/denuncias.html">Formulários</a></li>
         <li class="logo-item">
           <img src="https://preview.redd.it/3qe3e6awkjb01.png?auto=webp&s=df0ee4e3c331db741a6b3a80eff9fdc0bc638244" alt="Logo" class="logo">
