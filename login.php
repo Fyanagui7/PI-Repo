@@ -23,7 +23,7 @@ if ($result->num_rows > 0) {
     $_SESSION['usuario'] = $usuario;
 
   
-    header("Location: ./pagina_log/home.html");
+    header("Location: ./pagina_log/home.php");
     exit();
     
 } else {
