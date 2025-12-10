@@ -13,7 +13,7 @@
     <div class="navbar-container">
       <a href="#" class="sosi-btn"><span class="sos">SOS</span><span class="i">I</span></a>
       <ul class="menu">
-        <li><a href="./LogAdm/homeADM.html">Home</a></li>
+        <li><a href="./LogAdm/homeADM.php">Home</a></li>
         <li><a href="./LogAdm/denunciasADM.html">Formulários</a></li>
         <li class="logo-item">
           <img src="https://preview.redd.it/3qe3e6awkjb01.png?auto=webp&s=df0ee4e3c331db741a6b3a80eff9fdc0bc638244" alt="Logo" class="logo">
@@ -23,7 +23,7 @@
       </ul>
       <div class="auth-links">
             <li style="list-style: none; text-decoration: underline white"><a href="../perfil.php">Perfil</a></li>
-            <li style="list-style: none; text-decoration: underline white;"><a href="../CadastrosLog.php">Log Usuários</a></li>
+            <li style="list-style: none; text-decoration: underline white;"><a href="../CadastrosLog.php">Log</a></li>
       </div>
     </div>
   </nav>
@@ -43,6 +43,7 @@ $result = $conexao->query($sql);
     <title>Lista de Usuários</title>
 </head>
 <body>
+    <div class='conteudo'>
     <h2>Usuários Cadastrados</h2>
 
     <table border="1" cellpadding="5" cellspacing="0">
@@ -89,5 +90,6 @@ $result = $conexao->query($sql);
             }
         }
     </script>
+    
 </body>
 </html>

@@ -40,6 +40,8 @@ $result = $conexao->query($sql);
     </div>
   </nav>
 
+   <button class="postagem"><a  href='../criaPostagem.html'>Realizar Postagem</a></button>
+
   <main class="container">
 
     <?php while($post = $result->fetch_assoc()): ?>
@@ -68,7 +70,7 @@ $result = $conexao->query($sql);
 
         <!-- IMAGEM DO POST -->
         <img class="post-image" 
-            src="<?php echo $post['imagem'] ? '../'.$post['imagem'] : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxifN76Lz2jhaK5VFFLcPe2Ah_n1P5qEfMHg&s'; ?>" 
+            src="<?php echo $post['imagem'] ? '../'.$post['imagem'] : ''; ?>" 
             alt="Postagem">
 
         <div class="comment-box">

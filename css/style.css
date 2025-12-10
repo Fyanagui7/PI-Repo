@@ -148,3 +148,8 @@ position: absolute;
 padding:17px;
 text-decoration: underline;
 }
+
+.postagem a{
+  text-decoration: none;
+  color: white;
+}

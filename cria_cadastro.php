@@ -34,6 +34,7 @@ VALUES ('$email', '$name', '$senha', '$celular', '$cpf');";
 
 if(mysqli_query($conexao, $query)){
     echo "<h1>Pessoa cadastrada com sucesso!</h1>";
+    header("Location: ./pagina_log/home.php");
     
 }else{
     echo "<h1>Erro ao cadastrar</h1>";
