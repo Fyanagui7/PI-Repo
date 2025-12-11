@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOSI - Indaiatuba Digital</title>
+    <!-- Importando ícones para ilustrar os serviços -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* =========================================
+           SEU CSS ORIGINAL (NAVBAR)
+           ========================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding-top: 120px; /* Espaço para a navbar fixa */
+        }
+        
+        /* navbar.css - unificado */
+        * { box-sizing: border-box; }
+
+        html { overflow-y: scroll; scroll-behavior: smooth; }
+
+        /* Base navbar */
+        nav.topo {
+            background-color: #000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 0;
+            z-index: 1000;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Adicionei uma sombra para destacar */
+        }
+
+        .navbar-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .sosi-btn {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-left: 0;
+            transition: transform 0.2s;
+        }
+
+        .sosi-btn .sos { color: #fff; }
+        .sosi-btn .i { color: #ff4757; } /* Destaquei o "I" para combinar com o design */
+
+        .menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex: none;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            background-color: rgba(255,255,255,0.08);
+            padding: 8px 15px;
+            font-size: 18px;
+            border-radius: 8px;
+            display: inline-block;
+            transition: all 0.18s;
+        }
+
+        .menu li a:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .logo-item {
+            display: flex;
+            align-items: center;
+        }
+        .logo-item .logo {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            border: 2px solid #fff; /* Adicionei borda para acabamento */
+        }
+
+        .auth-links {
+            display: flex;
+            gap: 1.2rem;
+            margin-right: 0;
+        }
+        .auth-links a {
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .auth-links a:hover {
+            color: #ff4757;
+        }
+
+        .menu li a:focus,
+        .auth-links a:focus,
+        .sosi-btn:focus {
+            outline: 2px solid rgba(255,255,255,0.2);
+            outline-offset: 2px;
+        }
+
+        @media (max-width: 900px) {
+            .navbar-container { padding: 0 12px; }
+            .menu { gap: 1rem; }
+            .sosi-btn { font-size: 24px; }
+            .logo-item .logo { width: 40px; height: 40px; }
+            .menu li a { font-size: 14px; padding: 6px 10px; }
+        }
+
+        /* =========================================
+           NOVO CSS - HOME PAGE (ESTILO MODERNO)
+           ========================================= */
+
+        :root {
+            --primary-accent: #ff4757; /* Vermelho/Laranja para Ação (SOS) */
+            --dark-bg: #1e1e1e;
+            --light-text: #f0f0f0;
+            --card-bg: #ffffff;
+        }
+
+        /* Container Global */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- HERO SECTION (Principal) --- */
+        .hero {
+            /* Imagem de fundo da cidade */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1544&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            border-radius: 0 0 30px 30px; /* Curva suave na parte inferior */
+            margin: -20px 20px 40px 20px; /* Ajuste para criar efeito de card flutuante */
+            padding: 4rem 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            color: var(--primary-accent);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin-bottom: 2.5rem;
+            color: #ddd;
+        }
+
+        .hero-btn {
+            background-color: var(--primary-accent);
+            color: #fff;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 71, 87, 0.6);
+            background-color: #ff6b81;
+        }
+
+        /* --- SEÇÃO DE FORMULÁRIOS (Cards) --- */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .section-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .grid-forms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .form-card {
+            background: var(--card-bg);
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-bottom: 5px solid transparent;
+            text-decoration: none;
+            color: #333;
+            display: block; /* Para o link funcionar no card todo */
+        }
+
+        .form-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-bottom: 5px solid var(--primary-accent);
+        }
+
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background-color: #fff0f1;
+            color: var(--primary-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem auto;
+            font-size: 1.8rem;
+        }
+
+        .form-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .form-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* --- SEÇÃO DE NOVIDADES --- */
+        .news-section {
+            background-color: #fff;
+            padding: 4rem 0;
+            margin-top: 2rem;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .news-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            background-color: #fff;
+        }
+
+        .news-card:hover {
+            transform: scale(1.02);
+        }
+
+        .news-image {
+            height: 200px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .news-content {
+            padding: 1.5rem;
+        }
+
+        .tag {
+            background-color: #333;
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .news-content h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #222;
+        }
+
+        .news-content p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .news-link {
+            color: var(--primary-accent);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        
+        .footer-info {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade Extra */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero { margin: 0; border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =========================================
+         SUA NAVBAR (CÓDIGO ORIGINAL)
+         ========================================= -->
+    <nav class="topo">
+        <div class="navbar-container">
+          <a href="#" class="sosi-btn"><span class="sos">SOS</span><span class="i">I</span></a>
+          <ul class="menu">
+            <li><a href="./LogAdm/homeADM.php">Home</a></li>
+            <li><a href="./LogAdm/denunciasADM.html">Formulários</a></li>
+            <li class="logo-item">
+              <img src="https://preview.redd.it/3qe3e6awkjb01.png?auto=webp&s=df0ee4e3c331db741a6b3a80eff9fdc0bc638244" 
+                   alt="Logo" class="logo">
+            </li>
+            <li><a href="./LogAdm/sobreADM.html">Sobre</a></li>
+            <li><a href="./LogAdm/contatoADM.html">Contato</a></li>
+          </ul>
+          <div class="auth-links">
+                <li style="list-style: none; text-decoration: underline white;"><a href="perfil.php">Perfil</a></li>
+                <li style="list-style: none; text-decoration: underline white;"><a href="CadastrosLog.php">Log</a></li>
+          </div>
+        </div>
+    </nav>
+
+    <!-- =========================================
+         CONTEÚDO DA HOME PAGE
+         ========================================= -->
+
+    <!-- 1. Hero Section: A parte "Bonita" e descritiva -->
+    <section class="hero">
+        <div class="container">
+            <h1>Indaiatuba na palma da<br><span>sua mão.</span></h1>
+            <p>Conectando cidadãos à prefeitura. Um sistema integrado para reportar problemas, acompanhar melhorias e transformar nossa cidade juntos.</p>
+            
+            <a href="./LogAdm/denunciasADM.html" class="hero-btn">
+                <i class="fa-solid fa-bullhorn"></i> Abrir um Chamado
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. Atalhos para Formulários (A parte principal) -->
+    <section class="container">
+        <div class="section-header">
+            <h2>O que você deseja reportar?</h2>
+            <p>Selecione a categoria do problema para enviar as informações, foto e local.</p>
+        </div>
+
+        <div class="grid-forms">
+            <!-- Card 1 -->
+            <a href="./LogAdm/denunciasADM.html" class="form-card">
+                <div class="icon-box"><i class="fa-solid fa-road"></i></div>
+                <h3>Vias Públicas</h3>
+                <p>Buracos na rua, calçadas danificadas ou problemas de pavimentação no seu bairro.</p>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="./LogAdm/denunciasADM.html" class="form-card">
+                <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                <h3>Iluminação / Energia</h3>
+                <p>Postes apagados, fios caídos ou falta de energia em locais públicos.</p>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="./LogAdm/denunciasADM.html" class="form-card">
+                <div class="icon-box"><i class="fa-solid fa-traffic-light"></i></div>
+                <h3>Trânsito</h3>
+                <p>Semáforos quebrados, sinalização ausente ou acidentes que necessitam de atenção.</p>
+            </a>
+
+            <!-- Card 4 -->
+            <a href="./LogAdm/denunciasADM.html" class="form-card">
+                <div class="icon-box"><i class="fa-solid fa-tree"></i></div>
+                <h3>Limpeza e Meio Ambiente</h3>
+                <p>Árvores caídas, acúmulo de lixo, limpeza de praças e terrenos.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- 3. Notícias da Cidade -->
+    <section class="news-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="text-align: left;">Novidades em Indaiatuba</h2>
+                <hr style="width: 60px; height: 3px; background-color: #ff4757; border: none; margin: 0;">
+            </div>
+
+            <div class="news-grid">
+                <!-- Notícia 1 -->
+                <article class="news-card">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1558008258-3256797b43f3?q=80&w=1631&auto=format&fit=crop');"></div>
+                    <div class="news-content">
+                        <span class="tag">Educação</span>
+                        <h3>Novas Escolas Integrais</h3>
+                        <p>Prefeitura anuncia a construção de duas novas unidades escolares no distrito industrial.</p>
+                        <a href="#" class="news-link">Ler mais &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Notícia 2 -->
+                <article class="news-card">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1470&auto=format&fit=crop');"></div>
+                    <div class="news-content">
+                        <span class="tag">Obras</span>
+                        <h3>Revitalização do Parque Ecológico</h3>
+                        <p>Obras de melhoria na pista de skate e novos quiosques serão entregues neste fim de semana.</p>
+                        <a href="#" class="news-link">Ler mais &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Notícia 3 -->
+                <article class="news-card">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1570126618953-d437176e8c79?q=80&w=1548&auto=format&fit=crop');"></div>
+                    <div class="news-content">
+                        <span class="tag">Empresas</span>
+                        <h3>Indaiatuba atrai novas empresas</h3>
+                        <p>Cidade se destaca na região metropolitana com incentivos fiscais para tecnologia.</p>
+                        <a href="#" class="news-link">Ler mais &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Simples -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">SOSI</div>
+            <p>Sistema Operacional de Serviços de Indaiatuba</p>
+            <div class="footer-info">
+                &copy; 2024 Prefeitura Municipal de Indaiatuba. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
