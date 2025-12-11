@@ -1,0 +1,80 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  padding-top: 120px;
+}
+
+/* Container centralizado */
+.form-container {
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    margin: auto;
+    margin-top: 40px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Campos */
+.campo {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.campo input[type="text"],
+.campo textarea,
+.campo input[type="file"] {
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+/* Foco */
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 4px rgba(0, 119, 255, 0.3);
+}
+
+/* Botão */
+.btn-enviar {
+    width: 100%;
+    padding: 14px;
+    background-color: #0066cc;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn-enviar:hover {
+    background-color: #004b99;
+    transform: scale(1.03);
+}

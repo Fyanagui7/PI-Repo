@@ -3,25 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Criar Postagem</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/criaPostagem.css">
+    <link rel="stylesheet" href="./css/navbar.css">
 </head>
 <body>
 
+<!-- NAVBAR -->
+<nav class="topo">
+    <div class="navbar-container">
+      <a href="#" class="sosi-btn"><span class="sos">SOS</span><span class="i">I</span></a>
+      <ul class="menu">
+        <li><a href="./LogAdm/homeADM.php">Home</a></li>
+        <li><a href="./LogAdm/denunciasADM.html">Formulários</a></li>
+        <li class="logo-item">
+          <img src="https://preview.redd.it/3qe3e6awkjb01.png?auto=webp&s=df0ee4e3c331db741a6b3a80eff9fdc0bc638244" 
+               alt="Logo" class="logo">
+        </li>
+        <li><a href="./LogAdm/sobreADM.html">Sobre</a></li>
+        <li><a href="./LogAdm/contatoADM.html">Contato</a></li>
+      </ul>
+      <div class="auth-links">
+            <li style="list-style: none; text-decoration: underline white;"><a href="perfil.php">Perfil</a></li>
+            <li style="list-style: none; text-decoration: underline white;"><a href="CadastrosLog.php">Log</a></li>
+      </div>
+    </div>
+</nav>
+
+<!-- Conteúdo principal -->
+<div class="form-container">
     <h2>Nova Postagem</h2>
 
     <form action="criaPostagem.php" method="POST" enctype="multipart/form-data">
+        
+        <div class="campo">
+            <label>Título:</label>
+            <input type="text" name="titulo" required>
+        </div>
 
-        <label>Título:</label><br>
-        <input type="text" name="titulo" required><br><br>
+        <div class="campo">
+            <label>Descrição:</label>
+            <textarea name="descricao" rows="5" required></textarea>
+        </div>
 
-        <label>Descrição:</label><br>
-        <textarea name="descricao" rows="5" cols="40" required></textarea><br><br>
+        <div class="campo">
+            <label>Imagem (opcional):</label>
+            <input type="file" name="imagem">
+        </div>
 
-        <label>Imagem (opcional):</label><br>
-        <input type="file" name="imagem"><br><br>
-
-        <button type="submit">Enviar</button>
+        <button type="submit" class="btn-enviar">Enviar</button>
 
     </form>
+</div>
 
 </body>
 </html>
